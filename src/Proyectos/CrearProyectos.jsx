@@ -26,7 +26,9 @@ const CrearProyectos = () => {
         facultad: ""
     }
 
-
+    function confirmacion () {
+        alert("Proyecto registrado correctamente")
+    }
 
     return(<div>
         <h1>Crear proyectos</h1>
@@ -79,7 +81,7 @@ const CrearProyectos = () => {
             </div>
             
             <div>
-                <button>Registrar proyecto</button>
+                <button onClick={confirmacion}>Registrar proyecto</button>
             </div>
 
         </form>

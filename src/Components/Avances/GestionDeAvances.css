@@ -1,0 +1,16 @@
+.container{
+    background-color: #afeeee;
+    padding-top: 10mm;
+}
+.imagen{
+    font-weight: 612px;
+    height: 382px;
+}
+.card{
+    margin-top: 200;
+}
+
+.boton{
+    background-color: lightgreen;
+}
+
