@@ -5,13 +5,11 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
-import NavbarComponent from './shared/components/navbar/NavbarComponent'
-import { Routes ,Route, Router } from 'react-router-dom';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Home from './Home';
-import GestionDeAvances from './GestionDeAvances';
+
+import App from './App';
 
 const client = new ApolloClient({
   uri: 'http://localhost:9092/graphql',
@@ -23,12 +21,6 @@ const client = new ApolloClient({
 const inicio = document.getElementById("root")
 ReactDom.render(
   <ApolloProvider client={client}>
-    <Router>
-    <NavbarComponent />
-      <Routes>
-        <Route path="/GestionDeAvances" exact/>
-        <Route path= "/" components={Home} />
-      </Routes>
-    </Router>
+  <App/>
   </ApolloProvider>, inicio)
 
