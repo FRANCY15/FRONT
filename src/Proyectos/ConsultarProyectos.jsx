@@ -18,7 +18,11 @@ const ConsultarProyectos = () => {
           idDelLider,
           facultad,
           faseProyecto,
-          estudiantesInscritos
+          estudiantesInscritos{
+            nombre,
+            identificacion
+            estado
+            }
   
     }
   }`;
@@ -40,7 +44,7 @@ const ConsultarProyectos = () => {
       <td>{idDelLider}</td>
       <td>{facultad}</td>
       <td>{faseProyecto}</td>
-      <td>{estudiantesInscritos}</td>
+      <td>{estudiantesInscritos.map((estudiante)=>(<ul>{estudiante.nombre}</ul>))}</td>
     </tr>
   ));
   return <table class="table table-striped table-hover">
