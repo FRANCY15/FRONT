@@ -10,6 +10,7 @@ import ConsultarProyectos from './Proyectos/ConsultarProyectos'
 import NavbarComponent from './shared/components/navbar/NavbarComponent'
 import PagPal from './Home';
 import CrearAvances from './Components/Avances/CrearAvance';
+import Login from './Login/Login';
 
 
 function App() {
@@ -19,12 +20,13 @@ function App() {
     <Router>
     <NavbarComponent/>
     <Routes>
-      <Route path="/" element={<PagPal />}/>
+      <Route path="/Home" element={<PagPal />}/>
       <Route path="/GestionDeAvances" element={<GestionDeAvances />} />
       <Route path="/CrearAvance" element={<CrearAvances />} />
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
+      <Route path="/Login" element={<Login/>} />
     </Routes>
     </Router>
   );

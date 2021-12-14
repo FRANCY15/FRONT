@@ -1,12 +1,13 @@
 import { gql, useMutation } from "@apollo/client";
 import React, { Fragment } from "react";
-
+import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const MUTATION_AVANCE = gql`
-mutation registrarAvance( $idProyecto: String,$fechaAvance: Date, $descripcion: String, $observaciones: String, $estudiantesInscritos: String){
+mutation registrarAvance( $idProyecto: String, $descripcion: String, $estudiantesInscritos: String){
 
-    crearAvance(proyecto:{idProyecto: $idProyecto, fechaAvance:$fechaAvance, descripcion: $descripcion, observaciones:$observaciones, estudiantesInscritos: $estudiantesInsritos})
+    createAdvance(advance:{idProyecto: $idProyecto, descripcion: $descripcion, estudiantesInscritos: $estudiantesInscritos})
 }
 `
 const CrearAvances = () => {
@@ -15,7 +16,6 @@ const CrearAvances = () => {
     let avance = {
         idProyecto: "",
         descripcion: "",
-        observaciones: "",
         estudiantesInscritos: ""
     }
 
@@ -23,13 +23,12 @@ const CrearAvances = () => {
         alert("Avance registrado correctamente")
     }
 
-    return (
-        <Fragment>
-            <div className="container-fluid">
+    return (<div className="container-fluid col-2">
                 <div className="row">
-                    <div className="col-6 col-sm-6"></div>
+                    <div className="col-sm-8"></div>
                     <br />
-                    <h1>Registrar Avance</h1>
+                    <br/>
+                    <h1 className="h1">Registrar Avance</h1>
                     <br />
                     <br />
                     <form
@@ -44,58 +43,56 @@ const CrearAvances = () => {
                                 }
                             })
                         }}>
-                    </form>
-                </div>
+                    
                 <div className="container-fluid">
                     <br />
                     <div className="row">
-                        <div className="col-6 col-sm-6">
-                            <label >ID del Proyecto</label>
+                        <div className="col-sm-12">
+                            <label className="h5">ID del Proyecto</label>
+                            <br />
                         </div>
                         <div className="col-sm-8">
-                            <input ref={idPro => avance.idProyecto = idPro} placeholder="Identificador del proyecto" />
+                            <input ref={idProyecto => avance.idProyecto = idProyecto} placeholder="Identificador del proyecto" className="square"/>
                         </div>
                         <div>
                         </div>
                         <div className="row">
                             <div className="col-6 col-sm-6">
-                                <label>Descripción</label>
+                                <br />
+                                <label className="h5">Descripción</label>
+                                <br />
                             </div>
                             <div className="col-sm-8">
-                            <input ref={descripcion => avance.descripcion = descripcion} placeholder="Descripción del proyecto" />
+                            <input ref={descripcion => avance.descripcion = descripcion} placeholder="Descripción del proyecto"  className="square" />
                         </div>
                     </div>
                     <br />
                     <br />
                     <div>
                     <div className="row">
-                        <div className="col-6 col-sm-6">
-                        <label>Observaciones</label>
+                        <div className="col-sm-12">
+                            <br />
+                        <label className="h5">Estudiantes Inscritos</label>
                         </div>
                         <div className="col-sm-8">
-                        <input ref={observaciones => avance.observaciones = observaciones} placeholder="Observaciones" />
-                    </div>
-                    </div>
-                    <div>
-                    <div className="row">
-                        <div className="col-6 col-sm-6">
-                        <label>Estudiantes Inscritos</label>
-                        </div>
-                        <div className="col-sm-8">
-                        <input ref={EstInsritos => avance.estudiantesInscritos = EstInsritos} placeholder="Estudiantes Inscritos" />
+                        <input ref={EstudiantesInsritos => avance.estudiantesInscritos = EstudiantesInsritos} placeholder="Estudiantes Inscritos"  className="square" />
                         </div>
                     </div>
                     </div>
                     <br />
                     <br />
-                    
-                        <button className="btn btn-primary" onClick={confirmacion}>Registrar Avance</button>
-                    
+                        <button className="btn btn-dark h5" onClick={confirmacion}><FontAwesomeIcon icon={faCheckSquare}/> Registrar Avance </button>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                 </div>
                 </div>
+                <br />
+                <br />
+            </form>
+                </div>
             </div>
-            </div>
-        </Fragment>
     )
 }
 

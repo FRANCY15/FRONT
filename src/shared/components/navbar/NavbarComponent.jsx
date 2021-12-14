@@ -9,7 +9,7 @@ const Navbar = () => {
             
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid" >
-                    <a className="navbar-brand" href="#"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </a>
+                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </Link>
                     <form className="d-flex">
                     <FontAwesomeIcon icon={faSearch}/>
                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
@@ -35,7 +35,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <form className="d-flex">
-                        <a className="btn btn-secondary" type="">Ingresar al Sistema <FontAwesomeIcon icon={faChevronDown}/> </a>
+                        <Link className="btn btn-secondary" to="/Login" >Ingresar al Sistema <FontAwesomeIcon icon={faChevronDown}/> </Link>
                     </form>
                     </div>
                 </div>

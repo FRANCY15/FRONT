@@ -1,5 +1,7 @@
 import { gql, useMutation } from "@apollo/client";
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -81,7 +83,7 @@ const CrearProyectos = () => {
             </div>
             
             <div>
-                <button onClick={confirmacion}>Registrar proyecto</button>
+                <button onClick={confirmacion}> <FontAwesomeIcon icon={faCheckSquare}/> Registrar proyecto</button>
             </div>
 
         </form>
@@ -90,18 +92,6 @@ const CrearProyectos = () => {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default CrearProyectos
 
