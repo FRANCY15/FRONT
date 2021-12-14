@@ -6,6 +6,15 @@
     font-weight: 612px;
     height: 382px;
 }
+
+.imagen2{
+    padding-top: 50mm;
+    background-image: url(https://www.igeoapp.com/sso/img/fondos/fondo_login_erp_2.jpg);
+    height: 800px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
 .card{
     margin-top: 200;
 }
@@ -16,11 +25,24 @@
 .h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
 
 .h5{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5mm;
+
+    
 }
 .square{
     border-radius: 2mm;
+}
+
+.h6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5mm;
+    color: white;
 }

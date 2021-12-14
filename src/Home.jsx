@@ -1,6 +1,8 @@
 import React from 'react'
 import Home from './assets/css/Home.css'
 import proyectos from './assets/img/proyectos.jpg'
+
+
 function PagPal() {
     return (
         <div className="container md-6; style">
