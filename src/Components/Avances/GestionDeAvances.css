@@ -13,4 +13,14 @@
 .boton{
     background-color: lightgreen;
 }
+.h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5mm;
+}
+.square{
+    border-radius: 2mm;
+}
