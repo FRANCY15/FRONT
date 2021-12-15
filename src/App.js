@@ -5,6 +5,8 @@ import GestionDeAvances from './Components/Avances/GestionDeAvances';
 import CrearProyectos from './Proyectos/CrearProyectos'
 import GestionDeProyectos from './Proyectos/GestionDeProyectos';
 import ConsultarProyectos from './Proyectos/ConsultarProyectos'
+import ActualizarProyectos from './Proyectos/ActualizarProyectos'
+
 
 
 import NavbarComponent from './shared/components/navbar/NavbarComponent'
@@ -26,6 +28,7 @@ function App() {
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
+      <Route path="/ActualizarProyectos" element={<ActualizarProyectos />} />
       <Route path="/Login" element={<Login/>} />
     </Routes>
     </Router>
