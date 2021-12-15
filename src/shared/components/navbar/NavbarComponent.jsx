@@ -9,7 +9,7 @@ const Navbar = () => {
             
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid" >
-                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </Link>
+                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeamFifteen </Link>
                     <form className="d-flex">
                     <FontAwesomeIcon icon={faSearch}/>
                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
