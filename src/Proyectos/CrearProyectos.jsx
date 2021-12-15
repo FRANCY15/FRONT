@@ -2,6 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
+import '../Components/Avances/GestionDeAvances.css'
 
 
 
@@ -32,9 +33,14 @@ const CrearProyectos = () => {
         alert("Proyecto registrado correctamente")
     }
 
-    return(<div>
-        <h1>Crear proyectos</h1>
-        <form 
+    return(<div className="container-fluid col-2">
+    <div className="row">
+        <br />
+        <br/>
+        <h1 className="h1 text-align: center" >Crear Proyectos</h1>
+        <br />
+        <br />
+        <form
         onSubmit={e => {
             e.preventDefault();
             ingresarProyecto({variables: {
@@ -50,45 +56,45 @@ const CrearProyectos = () => {
 
         }}>
             <div>
-                <label >ID del Proyecto</label>
-                <input ref = {idPro => proyecto.idProyecto = idPro} placeholder="Identificador del proyecto"/>
+                <label className="h5">ID del Proyecto</label>
+                <input ref = {idPro => proyecto.idProyecto = idPro} placeholder="Identificador del proyecto" className="square"/>
             </div>
             <div>
-                <label>Nombre Proyecto</label>
-                <input ref = {nombreDelProyecto => proyecto.nombreDelProyecto = nombreDelProyecto} placeholder="Nombre del proyecto"/>
+                <label className="h5">Nombre Proyecto</label>
+                <input ref = {nombreDelProyecto => proyecto.nombreDelProyecto = nombreDelProyecto} placeholder="Nombre del proyecto" className="square"/>
             </div>
             <div>
-                <label>Objetivos Generales</label>
-                <input ref = {objGeneral => proyecto.objetivosGenerales = objGeneral} placeholder="Objetivos generales"/>
+                <label className="h5">Objetivos Generales</label>
+                <input ref = {objGeneral => proyecto.objetivosGenerales = objGeneral} placeholder="Objetivos generales" className="square"/>
             </div>
             <div>
-                <label>Objetivos Específicos</label>
-                <input ref = {objEspecifico => proyecto.objetivosEspecificos = objEspecifico} placeholder="Objetivos específicos"/>
+                <label className="h5">Objetivos Específicos</label>
+                <input ref = {objEspecifico => proyecto.objetivosEspecificos = objEspecifico} placeholder="Objetivos específicos" className="square"/>
             </div>
             <div>
-                <label>Presupuesto</label>
-                <input ref = {presupuesto => proyecto.presupuesto = presupuesto} placeholder="$$$$$$$$$$$"/>
+                <label className="h5">Presupuesto</label>
+                <input ref = {presupuesto => proyecto.presupuesto = presupuesto} placeholder="$$$$$$$$$$$" className="square"/>
             </div>
             <div>
-                <label>Líder del proyecto</label>
-                <input ref = {nombreLider => proyecto.nombreLider = nombreLider} placeholder="Nombre del líder del proyecto"/>
+                <label className="h5">Líder del proyecto</label>
+                <input ref = {nombreLider => proyecto.nombreLider = nombreLider} placeholder="Nombre del líder" className="square"/>
             </div>
             <div>
-                <label>ID del líder del proyecto</label>
-                <input ref = {idDelLider => proyecto.idDelLider = idDelLider} placeholder="ID del líder del proyecto"/>
+                <label className="h5">ID del líder del proyecto</label>
+                <input ref = {idDelLider => proyecto.idDelLider = idDelLider} placeholder="ID del líder del proyecto" className="square"/>
             </div>
             <div>
-                <label>Facultad</label>
-                <input ref = {facultad => proyecto.facultad = facultad} placeholder="Facultad a la que pertenece el proyecto"/>
+                <label className="h5">Facultad</label>
+                <input ref = {facultad => proyecto.facultad = facultad} placeholder="Facultad" className="square"/>
             </div>
-            
+            <br></br>
             <div>
-                <button onClick={confirmacion}> <FontAwesomeIcon icon={faCheckSquare}/> Registrar proyecto</button>
+                <button className="btn btn-dark h5" onClick={confirmacion}> <FontAwesomeIcon icon={faCheckSquare}/> Registrar proyecto</button>
             </div>
 
         </form>
 
-
+        </div>
         </div>
     )
 }
