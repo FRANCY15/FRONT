@@ -32,7 +32,7 @@ const GestionDeAvances = () => {
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá consultar los avances relacionados a sus proyectos
                                 </p>
-                                <Link className="button" aria-current="page" to="/CrearAvance" >Consultar Avance</Link>
+                                <Link className="button" aria-current="page" to="/ConsultarAvances" >Consultar Avance</Link>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const GestionDeAvances = () => {
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá actualizar los avances relacionados a sus proyectos
                                 </p>
-                                <Link className="button" aria-current="page" to="/CrearAvance" >Actualizar Avance</Link>
+                                <Link className="button" aria-current="page" to="/ActualizarAvances" >Actualizar Avance</Link>
                             </div>
                         </div>
                     </div>

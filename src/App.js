@@ -17,6 +17,8 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent'
 import PagPal from './Home';
 import CrearAvances from './Components/Avances/CrearAvance';
 import Login from './Login/Login';
+import ConsultarAvances from './Components/Avances/ConsultarAvances';
+import ActualizarAvances from './Components/Avances/ActualizarAvances';
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
       <Route path="/Home" element={<PagPal />}/>
       <Route path="/GestionDeAvances" element={<GestionDeAvances />} />
       <Route path="/CrearAvance" element={<CrearAvances />} />
+      <Route path="/ConsultarAvances" element={<ConsultarAvances />} />
+      <Route path="/ActualizarAvances" element={<ActualizarAvances />} />
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
