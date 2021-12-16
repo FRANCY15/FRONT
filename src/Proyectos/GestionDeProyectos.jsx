@@ -5,7 +5,6 @@ import { faCogs, faFolder, faChevronDown, faClipboardList, faSearch, faBrain, fa
 import avance from '../assets/img/avance.jpg'
 import consultar from '../assets/img/consultar.jpg'
 import actualizar from '../assets/img/actualizar.jpg'
-import GestionDeAvances from '../Components/Avances/GestionDeAvances.css'
 
 const GestionDeProyectos = () => {
   return (

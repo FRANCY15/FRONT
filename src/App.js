@@ -4,7 +4,10 @@ import './App.css';
 import GestionDeAvances from './Components/Avances/GestionDeAvances';
 import CrearProyectos from './Proyectos/CrearProyectos'
 import GestionDeProyectos from './Proyectos/GestionDeProyectos';
-import ConsultarProyectos from './Proyectos/ConsultarProyectos'
+import ConsultarProyectos from './Proyectos/ConsultarProyectos';
+import GestionDeUsuarios from './Components/Usuarios/GetionDeUsuarios';
+import ConsultarUsuarios from './Components/Usuarios/ConsultarUsuarios';
+import RegistrarUsuario from "./Components/Usuarios/RegistrarUsuario"
 
 
 import NavbarComponent from './shared/components/navbar/NavbarComponent'
@@ -26,6 +29,9 @@ function App() {
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
+      <Route path="/GestionDeUsuarios" element={<GestionDeUsuarios />} />
+      <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
+      <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
       <Route path="/Login" element={<Login/>} />
     </Routes>
     </Router>

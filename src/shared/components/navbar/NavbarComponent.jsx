@@ -24,8 +24,7 @@ const Navbar = () => {
                                 <Link className="nav-link active" aria-current="page" to="/GestionDeProyectos" ><FontAwesomeIcon icon={faFolder}/> Gestión de Proyectos</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link active " href="#"><FontAwesomeIcon icon={faCogs}/>
-                                    Gestión de Usuarios</a>
+                                <Link className="nav-link active " aria-current="page" to="/GestionDeUsuarios"><FontAwesomeIcon icon={faCogs}/>Gestión de Usuarios</Link>
                             </li>
                             <li className="nav-item">
                             <a className="nav-link active"> <FontAwesomeIcon icon={faClipboardList}/> Gestión de Inscripciones</a>
