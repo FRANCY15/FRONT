@@ -9,7 +9,7 @@ import '../Components/Avances/GestionDeAvances.css'
 const ConsultarProyectos = () => {
     const PROYECTOS = gql`
     query {buscarProyectoPorLider
-      (nombreLider:){
+      (nombreLider:"Pepito"){
           idProyecto,
           nombreDelProyecto,
           objetivosGenerales,
