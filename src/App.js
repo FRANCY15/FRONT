@@ -13,10 +13,9 @@ import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones';
 import VerProyectos from './Proyectos/VerProyectos'
 import ConsultarUsuarios from './Components/Usuarios/ConsultarUsuarios';
 import RegistrarUsuario from "./Components/Usuarios/RegistrarUsuario"
-import ActualizarUsuarios from './Usuarios/ActualizarUsuarios';
+import ActualizarUsuarios from "./Components/Usuarios/ActualizarUsuarios";
 
 //--------------------------------
-import GestionDeUsuarios from './Usuarios/GestionDeUsuarios';
 import GestionDeUsuarios from './Components/Usuarios/GetionDeUsuarios';
 //--------------------------------
 

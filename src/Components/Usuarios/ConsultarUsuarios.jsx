@@ -27,7 +27,6 @@ const ConsultarUsuarios = () => {
     </div>
   }
 
-
   return (
     <div>
       <form
@@ -51,7 +50,6 @@ const ConsultarUsuarios = () => {
           </thead>
         </table>
       </form>
-
     </div>)
 }
 
