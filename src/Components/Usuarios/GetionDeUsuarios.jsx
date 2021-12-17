@@ -32,6 +32,7 @@ const GestionDeUsuarios = () => {
                                     En esta opción usted podrá consultar los usuarios
                                 </p>
                                 <Link className="button" aria-current="page" to="/ConsultarUsuarios" >Consultar Usuarios</Link>
+                                {"    "}<Link className="button" aria-current="page" to="/ConsultarEstudiantes" >Consultar Estudiantes</Link>
                             </div>
                         </div>
                     </div>

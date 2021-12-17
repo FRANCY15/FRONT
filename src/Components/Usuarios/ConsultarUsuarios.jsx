@@ -5,7 +5,7 @@ import Usuario from "./Usuario"
 
 
 const ConsultarUsuarios = () => {
-    const Usuarios = gql`
+  const Usuarios = gql`
     query  {
       consultaUsuarios {
         identificacion
@@ -18,29 +18,41 @@ const ConsultarUsuarios = () => {
     }
   `;
 
-    const { loading, error, data } = useQuery(Usuarios)
-    if (loading) return <h1>Cargando...</h1>
+  const { loading, error, data } = useQuery(Usuarios)
+  if (loading) return <h1>Cargando...</h1>
 
-    if (error) {
-      return <div>
-          <p>Hubo un error</p>
-      </div>
-    }
-  
-  
-    return (<table className="table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Identificacion</th>
-          <th>Estado</th>
-          <th>Email</th>
-          <th>Rol</th>
-        </tr>
-        {data.consultaUsuarios.map((usuario) => <Usuario user={usuario} />)}
-      </thead>
-    </table>)
-  } 
+  if (error) {
+    return <div>
+      <p>Hubo un error</p>
+    </div>
+  }
 
-  export default ConsultarUsuarios
+
+  return (
+    <div>
+      <form
+        onSubmit={e => {
+          //e.preventDefault(); //esto previene que el form se mande.
+        }}>
+        <br></br>
+        <br></br>
+        <table class="table table-hover table align-middle ">
+          <thead>
+            <tr class="table-dark">
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Identificacion</th>
+              <th>Estado</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Accion</th>
+            </tr>
+            {data.consultaUsuarios.map((usuario) => <Usuario user={usuario} />)}
+          </thead>
+        </table>
+      </form>
+
+    </div>)
+}
+
+export default ConsultarUsuarios
