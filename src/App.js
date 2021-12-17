@@ -8,10 +8,18 @@ import GestionDeProyectos from './Proyectos/GestionDeProyectos';
 import ConsultarProyectos from './Proyectos/ConsultarProyectos';
 import ActualizarProyectos from './Proyectos/ActualizarProyectos';
 import GestionDeInscripciones from './Inscripciones/GestionDeInscripciones';
-import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones'
-import GestionDeUsuarios from './Components/Usuarios/GetionDeUsuarios';
+
+import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones';
+import VerProyectos from './Proyectos/VerProyectos'
 import ConsultarUsuarios from './Components/Usuarios/ConsultarUsuarios';
 import RegistrarUsuario from "./Components/Usuarios/RegistrarUsuario"
+import ActualizarUsuarios from './Usuarios/ActualizarUsuarios';
+
+//--------------------------------
+import GestionDeUsuarios from './Usuarios/GestionDeUsuarios';
+import GestionDeUsuarios from './Components/Usuarios/GetionDeUsuarios';
+//--------------------------------
+
 
 import NavbarComponent from './shared/components/navbar/NavbarComponent'
 import PagPal from './Home';
@@ -42,6 +50,7 @@ function App() {
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
+      <Route path="/VerProyectos" element={<VerProyectos />} />
       <Route path="/ActualizarProyectos" element={<ActualizarProyectos />} />
       <Route path= "/InscribirAproyecto" element={<InscribirAproyectos/>} />
       <Route path="/GestionDeInscripciones" element={<GestionDeInscripciones />} />
@@ -52,6 +61,10 @@ function App() {
       <Route path="/ConsultarTodosLosProyectos" element={<ConsultarTodosLosProyectos/>}/>
       <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/GestionDeUsuarios" element={<GestionDeUsuarios />} />
+      <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
+      <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
+      <Route path="/ActualizarUsuarios" element={<ActualizarUsuarios />} />
     </Routes>
     </Router>
   );

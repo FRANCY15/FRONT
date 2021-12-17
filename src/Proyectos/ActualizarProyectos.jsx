@@ -12,9 +12,6 @@ mutation cambiarProyecto( $idLider: Int, $idProyecto: String, $nombreDelProyecto
     actualizarProyecto(idLider: $idLider, idProyecto: $idProyecto, proyecto:{nombreDelProyecto: $nombreDelProyecto, objetivosGenerales: $objetivosGenerales, objetivosEspecificos: $objetivosEspecificos, presupuesto: $presupuesto})
 }
 `
-
-
-
 const ActualizarProyectos = () => {
     const [modificarProyecto] = useMutation(ACTUALIZAR_PROYECTO)
 

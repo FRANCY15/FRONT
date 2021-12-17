@@ -53,7 +53,7 @@ const ConsultarProyectos = () => {
       <td>{nombreLider}</td>
       <td>{facultad}</td>
       <td>{faseProyecto}</td>
-      <td>{estudiantesInscritos.map((estudiante)=> <ul>({estudiante.nombre})</ul>)}</td>
+      <td>{estudiantesInscritos.map((estudiante)=> <ul>{estudiante.nombre}</ul>)}</td>
     </tr>
   ));
   return (

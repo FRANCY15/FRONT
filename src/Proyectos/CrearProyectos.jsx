@@ -12,9 +12,6 @@ mutation registrarProyecto( $idProyecto: String, $nombreDelProyecto: String, $ob
     crearProyecto(proyecto:{idProyecto: $idProyecto, nombreDelProyecto:$nombreDelProyecto, objetivosGenerales: $objetivosGenerales, objetivosEspecificos:$objetivosEspecificos, presupuesto:$presupuesto, nombreLider:$nombreLider, idDelLider:$idDelLider, facultad:$facultad})
 }
 `
-
-
-
 const CrearProyectos = () => {
     const [ingresarProyecto] = useMutation(MUTATION_PROYECTO)
 
