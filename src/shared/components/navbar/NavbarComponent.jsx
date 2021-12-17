@@ -9,7 +9,7 @@ const Navbar = () => {
             
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid" >
-                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </Link>
+                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeamFifteen </Link>
                     <form className="d-flex">
                     <FontAwesomeIcon icon={faSearch}/>
                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
@@ -27,7 +27,7 @@ const Navbar = () => {
                                 <Link className="nav-link active " aria-current="page" to="/GestionDeUsuarios"><FontAwesomeIcon icon={faCogs}/>Gestión de Usuarios</Link>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link active" href='#'> <FontAwesomeIcon icon={faClipboardList}/> Gestión de Inscripciones</a>
+                            <Link className="nav-link active" aria-current="page" to="/GestionDeInscripciones" ><FontAwesomeIcon icon={faFolderPlus}/>Gestión de Inscripciones</Link>
                             </li>
                             <li className="nav-item dropdown"> 
                             <Link className="nav-link active" aria-current="page" to="/GestionDeAvances" ><FontAwesomeIcon icon={faFolderPlus}/>Gestión de Avances</Link>

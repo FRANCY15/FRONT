@@ -30,6 +30,7 @@ const ConsultarProyectos = () => {
   }`;
   
   const { loading, error, data } = useQuery(PROYECTOS)
+
   if (loading) return <h1>Cargando...</h1>
 
   if (error) {
@@ -37,6 +38,7 @@ const ConsultarProyectos = () => {
         <p>Hubo un error</p>
     </div>
   }
+
   const datosTabla = data.buscarProyectoPorLider.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estudiantesInscritos}) => (
 
 
@@ -71,7 +73,7 @@ const ConsultarProyectos = () => {
       <th>Líder</th>
       <th>Facultad</th>
       <th>Fase</th>
-      <th >Estudiantes Inscritos</th>
+      <th>Estudiantes Inscritos</th>
     </tr>
   </thead>
     <tbody>      

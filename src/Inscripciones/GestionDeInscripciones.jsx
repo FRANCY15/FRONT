@@ -1,23 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolderPlus } from '@fortawesome/free-solid-svg-icons'
+import {  faFolderPlus } from '@fortawesome/free-solid-svg-icons'
 import avance from '../assets/img/avance.jpg'
 import consultar from '../assets/img/consultar.jpg'
 import actualizar from '../assets/img/actualizar.jpg'
-import inscrbir from '../assets/img/inscribir.jpg'
-import GestionDeAvances from '../Components/Avances/GestionDeAvances.css'
 
-
-
-const GestionDeProyectos = () => {
+const GestionDeInscripciones = () => {
   return (
 
       <div className='container d-flex justify-content-center align-items-center'>
                 <div className='row'>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' alt="..." src={avance} />
+                            <img className='imagen' src={avance} />
                             <div className='card-body'>
                                 <h4>Crear Proyecto</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
@@ -29,38 +25,25 @@ const GestionDeProyectos = () => {
                     </div>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' alt="..." src={consultar} />
+                            <img className='imagen' src={consultar} />
                             <div className='card-body'>
-                                <h4>Consultar Proyectos</h4>
+                                <h4>Consultar Inscripciones</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
-                                    En esta opción usted podrá consultar sus proyectos
+                                    En esta opción usted podrá consultar las solicitudes de ingreso pendientes.
                                 </p>
-                                <Link className="button" aria-current="page" to="/ConsultarTodosLosProyectos" >Consultar Todos los Proyectos</Link>
-                                {"    "}<Link className="button" aria-current="page" to="/ConsultarProyectos" >Consultar Proyectos</Link>
+                                <Link className="button" aria-current="page" to="/ConsultarInscripciones" >Consultar Inscripciones</Link>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' alt="..." src={actualizar} />
+                            <img className='imagen' src={actualizar} />
                             <div className='card-body'>
                                 <h4>Actualizar Proyectos</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá actualizar sus proyectos
                                 </p>
                                 <Link className="button" aria-current="page" to="/ActualizarProyectos" >Actualizar o Modificar Proyecto</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className='card'>
-                            <img className='imagen' src={inscrbir} />
-                            <div className='card-body'>
-                                <h4>Inscribir estudiantes a Proyectos</h4>
-                                <p><FontAwesomeIcon icon={faFolderPlus} />
-                                    En esta opción usted podrá inscribirse a proyectos
-                                </p>
-                                <Link className="button" aria-current="page" to="/InscribirAproyecto" > Inscribirse a Proyectos</Link>
                             </div>
                         </div>
                     </div>
@@ -76,4 +59,4 @@ const GestionDeProyectos = () => {
   )
 }
 
-export default GestionDeProyectos
+export default GestionDeInscripciones
