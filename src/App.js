@@ -19,6 +19,7 @@ import CrearAvances from './Components/Avances/CrearAvance';
 import Login from './Login/Login';
 import ConsultarAvances from './Components/Avances/ConsultarAvances';
 import ActualizarAvances from './Components/Avances/ActualizarAvances';
+import InscribirAproyectos from './Proyectos/InscribirAproyecto';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
       <Route path="/ActualizarProyectos" element={<ActualizarProyectos />} />
+      <Route path= "/InscribirAproyecto" element={<InscribirAproyectos/>} />
       <Route path="/GestionDeInscripciones" element={<GestionDeInscripciones />} />
       <Route path="/ConsultarInscripciones" element={<ConsultarInscripciones />} />
       <Route path="/Login" element={<Login/>} />
