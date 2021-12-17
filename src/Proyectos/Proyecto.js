@@ -13,8 +13,15 @@ const Proyecto = ({ project }) => {
             cambiarFaseProyecto(idProyecto: $idProyecto)
         }
     `
+    const ACTIVAR_PROYECTO = gql`
+        mutation Mutation($idProyecto: String) {
+            activarProyecto(idProyecto: $idProyecto)
+        }
+    `
+
     const [aceptar] = useMutation(APROBAR_PROYECTO)
     const [cambiarFase] = useMutation(CAMBIAR_FASE_PROYECTO)
+    const [activar] = useMutation(ACTIVAR_PROYECTO)
 
     const aprobarProject = () => {
         aceptar({ variables: { idProyecto: project.idProyecto } })
@@ -22,6 +29,10 @@ const Proyecto = ({ project }) => {
 
     const cambiarFaseProject = () => {
         cambiarFase({ variables: { idProyecto: project.idProyecto } })
+    }
+
+    const activarProject = () => {
+        activar({ variables: { idProyecto: project.idProyecto } })
     }
 
     return <tr>
@@ -36,17 +47,13 @@ const Proyecto = ({ project }) => {
         <td>{project.facultad}</td>
         <td>{project.faseProyecto}</td>
         <td>{project.estudiantesInscritos.map((estudiante)=> <ul>({estudiante.nombre})</ul>)}</td>
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-md-12">
-                <td>{project.faseProyecto === null ? <button type="submit" className="btn btn-primary" onClick={aprobarProject}>Autorizar</button> : 
-                project.faseProyecto === "Inicial" ? <button className="btn btn-primary" onClick={cambiarFaseProject}>Desarrollar</button> : 
-                project.faseProyecto === "En desarrollo" ? <button className="btn btn-primary" onClick={cambiarFaseProject}>Finalizar</button> : null}
-            {/* <button className="btn btn-danger" onClick={eliminarUser}>Eliminar</button> */}</td>
-                </div>
-            </div>
-        </div>
-        
+        <td>
+        {project.faseProyecto === null ? <button type="submit" className="btn btn-primary" onClick={aprobarProject}>Autorizar</button> : 
+        project.faseProyecto === "Inicial" ? <button type="submit" className="btn btn-primary" onClick={cambiarFaseProject}>Desarrollar</button> : 
+        project.faseProyecto === "En desarrollo" ? <button type="submit" className="btn btn-primary " onClick={cambiarFaseProject}>Finalizar</button> : null}
+
+        {project.estadoProyecto === "true" ? <button type="submit" className="btn btn-danger" onClick={activarProject}>Desactivar</button>: 
+        <button type="submit" className="btn btn-danger" onClick={activarProject}>Activar</button>}</td>
     </tr>
 }
 

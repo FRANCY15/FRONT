@@ -25,7 +25,7 @@ const ConsultarUsuarios = () => {
       return <div>
           <p>Hubo un error</p>
       </div>
-  }
+    }
   
   
     return (<table className="table">

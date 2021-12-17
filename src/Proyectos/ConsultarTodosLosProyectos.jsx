@@ -22,6 +22,7 @@ const ConsultarTodosLosProyectos = () => {
           idDelLider,
           facultad,
           faseProyecto,
+          estadoProyecto,
           estudiantesInscritos{
             nombre,
             identificacion
