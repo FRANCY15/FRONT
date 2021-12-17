@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCogs, faFolder, faChevronDown, faClipboardList, faSearch, faBrain, faFolderPlus } from '@fortawesome/free-solid-svg-icons'
+import { faFolderPlus } from '@fortawesome/free-solid-svg-icons'
 import avance from '../../assets/img/avance.jpg'
 import consultar from '../../assets/img/consultar.jpg'
 import actualizar from '../../assets/img/actualizar.jpg'
@@ -13,7 +13,7 @@ const GestionDeUsuarios = () => {
                 <div className='row'>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' src={avance} />
+                            <img className='imagen' alt="..." src={avance} />
                             <div className='card-body'>
                                 <h4>Registrar Usuario</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
@@ -25,7 +25,7 @@ const GestionDeUsuarios = () => {
                     </div>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' src={consultar} />
+                            <img className='imagen' alt="..." src={consultar} />
                             <div className='card-body'>
                                 <h4>Consultar Usuarios</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
@@ -37,7 +37,7 @@ const GestionDeUsuarios = () => {
                     </div>
                     <div className="col-md-4">
                         <div className='card'>
-                            <img className='imagen' src={actualizar} />
+                            <img className='imagen' alt="..." src={actualizar} />
                             <div className='card-body'>
                                 <h4>Actualizar Usuarios</h4>
                                 <p><FontAwesomeIcon icon={faFolderPlus} />

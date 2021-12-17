@@ -14,7 +14,7 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent'
 import PagPal from './Home';
 import CrearAvances from './Components/Avances/CrearAvance';
 import Login from './Login/Login';
-import ConsultarTodosLosProyectos from './Proyectos/ColsultarTodosLosProyectos';
+import ConsultarTodosLosProyectos from './Proyectos/ConsultarTodosLosProyectos';
 
 
 function App() {

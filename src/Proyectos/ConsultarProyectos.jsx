@@ -30,10 +30,13 @@ const ConsultarProyectos = () => {
   }`;
   
   const { loading, error, data } = useQuery(PROYECTOS)
-  if (loading) return "<h1>Cargando</h1>"
-  console.log(data)
-   
-  
+  if (loading) return <h1>Cargando...</h1>
+
+  if (error) {
+    return <div>
+        <p>Hubo un error</p>
+    </div>
+  }
   const datosTabla = data.buscarProyectoPorLider.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estudiantesInscritos}) => (
 
 

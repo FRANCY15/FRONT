@@ -19,7 +19,13 @@ const ConsultarUsuarios = () => {
   `;
 
     const { loading, error, data } = useQuery(Usuarios)
-    if (loading) return "<h1>Cargando</h1>"
+    if (loading) return <h1>Cargando...</h1>
+
+    if (error) {
+      return <div>
+          <p>Hubo un error</p>
+      </div>
+  }
   
   
     return (<table className="table">

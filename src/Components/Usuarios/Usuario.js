@@ -8,21 +8,12 @@ const Usuario = ({ user }) => {
             aceptarUsuario(identificacion: $identificacion)
           }
     `
-    const ELIMINAR_USUARIO = gql`
-        mutation deleteUser($ident:Int){
-            deleteUser(ident:$ident)
-        }
-    `
+    
     const [aceptar] = useMutation(ACEPTAR_USUARIO)
-    const [eliminar] = useMutation(ELIMINAR_USUARIO)
 
 
     const aceptarUser = () => {
         aceptar({ variables: { identificacion: user.identificacion } })
-    }
-
-    const eliminarUser = () => {
-        eliminar({ variables: { ident: user.identificacion } })
     }
 
     return <tr>
@@ -32,7 +23,7 @@ const Usuario = ({ user }) => {
         <td>{user.estado}</td>
         <td>{user.correoElectronico}</td>
         <td>{user.rol}</td>
-        <td>{user.estado == "Pendiente" ? <button className="btn btn-primary" onClick={aceptarUser}>Autorizar</button> : null }
+        <td>{user.estado === "Pendiente" ? <button className="btn btn-primary" onClick={aceptarUser}>Autorizar</button> : null }
             {/* <button className="btn btn-danger" onClick={eliminarUser}>Eliminar</button> */}</td>
     </tr>
 }
