@@ -1,5 +1,4 @@
 import React from 'react'
-import fondoLogin from '../assets/img/fondoLogin.jpg'
 import '../Components/Avances/GestionDeAvances.css'
 import { faSignInAlt} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

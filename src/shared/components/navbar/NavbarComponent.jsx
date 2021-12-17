@@ -26,6 +26,7 @@ const Navbar = () => {
                             <li className="nav-item dropdown">
                             <Link className="nav-link active" aria-current="page" to="/GestionDeUsuarios" ><FontAwesomeIcon icon={faCogs}/>
                                     Gestión de Usuarios </Link>
+                                <Link className="nav-link active " aria-current="page" to="/GestionDeUsuarios"><FontAwesomeIcon icon={faCogs}/>Gestión de Usuarios</Link>
                             </li>
                             <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/GestionDeInscripciones" ><FontAwesomeIcon icon={faClipboardList}/>Gestión de Inscripciones</Link>

@@ -1,12 +1,11 @@
 import { gql, useMutation } from "@apollo/client";
-import React, { Fragment } from "react";
+import React from "react";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const MUTATION_AVANCE = gql`
 mutation registrarAvance( $idProyecto: String, $descripcion: String, $estudiantesInscritos: String){
-
     createAdvance(advance:{idProyecto: $idProyecto, descripcion: $descripcion, estudiantesInscritos: $estudiantesInscritos})
 }
 `
@@ -38,8 +37,7 @@ const CrearAvances = () => {
                                 variables: {
                                     idProyecto: avance.idProyecto.value,
                                     descripcion: avance.descripcion.value,
-                                    observaciones: avance.observaciones.value,
-                                    estudiantesInscritos: avance.estudiantesInscritos.value
+                                    estudiantesInscritos: avance.estudiantesInscritos.value,
                                 }
                             })
                         }}>
@@ -99,9 +97,3 @@ const CrearAvances = () => {
 
 
 export default CrearAvances
-
-
-
-
-
-
