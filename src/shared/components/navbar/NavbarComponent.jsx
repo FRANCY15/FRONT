@@ -9,7 +9,7 @@ const Navbar = () => {
             
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid" >
-                    <a className="navbar-brand" href="#"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </a>
+                    <Link className="navbar-brand" to="/Home"> <FontAwesomeIcon icon={faBrain}/> TeemFifteen </Link>
                     <form className="d-flex">
                     <FontAwesomeIcon icon={faSearch}/>
                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
@@ -19,22 +19,22 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#"><FontAwesomeIcon icon={faFolder}/> Gestión de Proyectos</a>
+
+                        <li className="nav-item dropdown"> 
+                                <Link className="nav-link active" aria-current="page" to="/GestionDeProyectos" ><FontAwesomeIcon icon={faFolder}/> Gestión de Proyectos</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link active " href="#"><FontAwesomeIcon icon={faCogs}/>
-                                    Gestión de Usuarios</a>
+                                <Link className="nav-link active " aria-current="page" to="/GestionDeUsuarios"><FontAwesomeIcon icon={faCogs}/>Gestión de Usuarios</Link>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link active"> <FontAwesomeIcon icon={faClipboardList}/> Gestión de Inscripciones</a>
+                            <a className="nav-link active" href='#'> <FontAwesomeIcon icon={faClipboardList}/> Gestión de Inscripciones</a>
                             </li>
                             <li className="nav-item dropdown"> 
                             <Link className="nav-link active" aria-current="page" to="/GestionDeAvances" ><FontAwesomeIcon icon={faFolderPlus}/>Gestión de Avances</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
-                        <a className="btn btn-secondary" type="">Ingresar al Sistema <FontAwesomeIcon icon={faChevronDown}/> </a>
+                        <Link className="btn btn-secondary" to="/Login" >Ingresar al Sistema <FontAwesomeIcon icon={faChevronDown}/> </Link>
                     </form>
                     </div>
                 </div>
