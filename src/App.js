@@ -9,6 +9,11 @@ import ActualizarProyectos from './Proyectos/ActualizarProyectos';
 import GestionDeInscripciones from './Inscripciones/GestionDeInscripciones';
 import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones';
 import VerProyectos from './Proyectos/VerProyectos'
+import GestionDeUsuarios from './Usuarios/GestionDeUsuarios';
+import RegistrarUsuario from './Usuarios/RegistrarUsuario';
+import ConsultarUsuarios from './Usuarios/ConsultarUsuarios';
+import ActualizarUsuarios from './Usuarios/ActualizarUsuarios';
+
 
 
 
@@ -40,6 +45,10 @@ function App() {
       <Route path="/GestionDeInscripciones" element={<GestionDeInscripciones />} />
       <Route path="/ConsultarInscripciones" element={<ConsultarInscripciones />} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/GestionDeUsuarios" element={<GestionDeUsuarios />} />
+      <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
+      <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
+      <Route path="/ActualizarUsuarios" element={<ActualizarUsuarios />} />
     </Routes>
     </Router>
   );

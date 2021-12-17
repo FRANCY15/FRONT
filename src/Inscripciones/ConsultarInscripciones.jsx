@@ -36,6 +36,7 @@ const ConsultarInscripciones = () => {
   ));
   return (
   <div>
+    <h1 className="h1 text-align: center">Solicitudes pendientes por aceptar</h1>
     <br></br>
     <br></br>  
   <table class="table table-hover table align-middle ">     

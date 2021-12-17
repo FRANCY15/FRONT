@@ -24,18 +24,18 @@ const Navbar = () => {
                                 <Link className="nav-link active" aria-current="page" to="/GestionDeProyectos" ><FontAwesomeIcon icon={faFolder}/> Gestión de Proyectos</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link active " href="#"><FontAwesomeIcon icon={faCogs}/>
-                                    Gestión de Usuarios</a>
+                            <Link className="nav-link active" aria-current="page" to="/GestionDeUsuarios" ><FontAwesomeIcon icon={faCogs}/>
+                                    Gestión de Usuarios </Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/GestionDeInscripciones" ><FontAwesomeIcon icon={faFolderPlus}/>Gestión de Inscripciones</Link>
+                            <Link className="nav-link active" aria-current="page" to="/GestionDeInscripciones" ><FontAwesomeIcon icon={faClipboardList}/>Gestión de Inscripciones</Link>
                             </li>
                             <li className="nav-item dropdown"> 
                             <Link className="nav-link active" aria-current="page" to="/GestionDeAvances" ><FontAwesomeIcon icon={faFolderPlus}/>Gestión de Avances</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
-                        <Link className="btn btn-secondary" to="/Login" >Ingresar al Sistema <FontAwesomeIcon icon={faChevronDown}/> </Link>
+                        <Link className="btn btn-secondary" to="/Login" >Ingresar<FontAwesomeIcon icon={faChevronDown}/> </Link>
                     </form>
                     </div>
                 </div>

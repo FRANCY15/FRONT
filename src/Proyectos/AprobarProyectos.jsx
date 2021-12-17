@@ -9,22 +9,12 @@ mutation aprobarProyecto($idProyecto: String) {
     aprobarProyecto(idProyecto: $idProyecto)
 }
 `;
-   
-  
-
 const [aprobar] = useMutation(APROBAR_PROYECTOS)
 
 const aprobarElProyecto = () => {
     
     aprobar({variables: {idProyecto: project.idProyecto}})
-} 
-
-   
-  
-//   const datosTabla = data.consultaProyectos.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estadoProyecto}) => (
-
-
-         
+}          
   ;
   return (
 

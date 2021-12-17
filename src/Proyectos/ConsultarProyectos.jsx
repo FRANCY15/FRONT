@@ -9,7 +9,7 @@ import '../Components/Avances/GestionDeAvances.css'
 const ConsultarProyectos = () => {
     const PROYECTOS = gql`
     query {buscarProyectoPorLider
-      (nombreLider:"Pepito"){
+      (nombreLider:){
           idProyecto,
           nombreDelProyecto,
           objetivosGenerales,
@@ -32,8 +32,7 @@ const ConsultarProyectos = () => {
   const { loading, error, data } = useQuery(PROYECTOS)
   if (loading) return "<h1>Cargando</h1>"
   console.log(data)
-   
-  
+    
   const datosTabla = data.buscarProyectoPorLider.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estudiantesInscritos}) => (
 
 
