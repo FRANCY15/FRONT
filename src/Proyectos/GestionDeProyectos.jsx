@@ -39,9 +39,8 @@ const GestionDeProyectos = () => {
                                 <Link className="button" aria-current="page" to="/ConsultarProyectos" >Consultar proyectos por líder</Link>
                                 <br></br>
                                 <Link className="button" aria-current="page" to="/VerProyectos" >Consultar y aprobar los proyectos</Link>
-
+                                <br></br>
                                 <Link className="button" aria-current="page" to="/ConsultarTodosLosProyectos" >Consultar Todos los Proyectos</Link>
-                                {"    "}<Link className="button" aria-current="page" to="/ConsultarProyectos" >Consultar Proyectos</Link>
                             </div>
                         </div>
                     </div>

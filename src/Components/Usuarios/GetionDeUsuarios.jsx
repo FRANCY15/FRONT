@@ -19,7 +19,7 @@ const GestionDeUsuarios = () => {
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá registrar usuario
                                 </p>
-                                <Link className="button" aria-current="page" to="/RegistrarUsuario" >Requistrar usuario</Link>
+                                <Link className="button" aria-current="page" to="/RegistrarUsuario" >Registrar usuario</Link>
                             </div>
                         </div>
                     </div>
