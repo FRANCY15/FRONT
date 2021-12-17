@@ -7,7 +7,10 @@ import GestionDeProyectos from './Proyectos/GestionDeProyectos';
 import ConsultarProyectos from './Proyectos/ConsultarProyectos'
 import ActualizarProyectos from './Proyectos/ActualizarProyectos';
 import GestionDeInscripciones from './Inscripciones/GestionDeInscripciones';
-import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones'
+import ConsultarInscripciones from './Inscripciones/ConsultarInscripciones';
+import VerProyectos from './Proyectos/VerProyectos'
+
+
 
 
 
@@ -32,6 +35,7 @@ function App() {
       <Route path="/GestionDeProyectos" element={<GestionDeProyectos />} />
       <Route path="/CrearProyectos" element={<CrearProyectos />} />
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
+      <Route path="/VerProyectos" element={<VerProyectos />} />
       <Route path="/ActualizarProyectos" element={<ActualizarProyectos />} />
       <Route path="/GestionDeInscripciones" element={<GestionDeInscripciones />} />
       <Route path="/ConsultarInscripciones" element={<ConsultarInscripciones />} />

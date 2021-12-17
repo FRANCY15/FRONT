@@ -32,7 +32,10 @@ const GestionDeProyectos = () => {
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá consultar sus proyectos
                                 </p>
-                                <Link className="button" aria-current="page" to="/ConsultarProyectos" >Consultar Proyectos</Link>
+                                <Link className="button" aria-current="page" to="/ConsultarProyectos" >Consultar proyectos por líder</Link>
+                                <br></br>
+                                <Link className="button" aria-current="page" to="/VerProyectos" >Consultar y aprobar los proyectos</Link>
+
                             </div>
                         </div>
                     </div>
@@ -45,6 +48,7 @@ const GestionDeProyectos = () => {
                                     En esta opción usted podrá actualizar sus proyectos
                                 </p>
                                 <Link className="button" aria-current="page" to="/ActualizarProyectos" >Actualizar o Modificar Proyecto</Link>
+                                
                             </div>
                         </div>
                     </div>
