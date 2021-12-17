@@ -14,6 +14,7 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent'
 import PagPal from './Home';
 import CrearAvances from './Components/Avances/CrearAvance';
 import Login from './Login/Login';
+import ConsultarTodosLosProyectos from './Proyectos/ColsultarTodosLosProyectos';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route path="/ConsultarProyectos" element={<ConsultarProyectos />} />
       <Route path="/GestionDeUsuarios" element={<GestionDeUsuarios />} />
       <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
+      <Route path="/ConsultarTodosLosProyectos" element={<ConsultarTodosLosProyectos/>}/>
       <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
       <Route path="/Login" element={<Login/>} />
     </Routes>

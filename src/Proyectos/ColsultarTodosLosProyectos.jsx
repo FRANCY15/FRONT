@@ -6,10 +6,10 @@ import '../Components/Avances/GestionDeAvances.css'
 
 
 
-const ConsultarProyectos = () => {
+const ConsultarTodosLosProyectos = () => {
     const PROYECTOS = gql`
-    query {buscarProyectoPorLider
-      (nombreLider:"Pepito"){
+    query {
+        consultaProyectos {
           idProyecto,
           nombreDelProyecto,
           objetivosGenerales,
@@ -34,7 +34,7 @@ const ConsultarProyectos = () => {
   console.log(data)
    
   
-  const datosTabla = data.buscarProyectoPorLider.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estudiantesInscritos}) => (
+  const datosTabla = data.consultaProyectos.map(({idProyecto, nombreDelProyecto, objetivosGenerales,objetivosEspecificos, presupuesto, fechaInicio, fechaTerminacion, nombreLider,facultad, faseProyecto, estudiantesInscritos}) => (
 
 
     <tr>
@@ -53,7 +53,7 @@ const ConsultarProyectos = () => {
   ));
   return (
   <div>
-    <br></br>
+      <br></br>
     <br></br>  
   <table class="table table-hover table align-middle ">     
   <thead >
@@ -82,4 +82,4 @@ const ConsultarProyectos = () => {
   }
 
 
-  export default ConsultarProyectos
+  export default ConsultarTodosLosProyectos
