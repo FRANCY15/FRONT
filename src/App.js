@@ -31,6 +31,10 @@ import ActualizarAvances from './Components/Avances/ActualizarAvances';
 import InscribirAproyectos from './Proyectos/InscribirAproyecto';
 import ConsultarTodosLosProyectos from './Proyectos/ConsultarTodosLosProyectos';
 import ConsultarEstudiantes from "./Components/Usuarios/ConsultarEstudiantes"
+import ConsultarInscrip from './Inscripciones/AprobarInscrip';
+import FiltroProyectos from './Proyectos/FiltroProyect';
+import IndexEstudiante from './registro/Estudiantes';
+import AgregarObservaciones from './observaciones/ObserAvance';
 
 
 
@@ -64,6 +68,10 @@ function App() {
       <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
       <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
       <Route path="/ActualizarUsuarios" element={<ActualizarUsuarios />} />
+      <Route path="/FiltroEstudiantes" element={<IndexEstudiante/>}/>
+      <Route path="/FiltroProyectos" element={<FiltroProyectos/>}/>
+      <Route path="/Inscrip" element={<ConsultarInscrip/>}/>
+      <Route path="/Observaciones" element={<AgregarObservaciones/>}/>
     </Routes>
     </Router>
   );

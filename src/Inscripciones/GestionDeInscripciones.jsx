@@ -31,7 +31,8 @@ const GestionDeInscripciones = () => {
                                 <p><FontAwesomeIcon icon={faFolderPlus} />
                                     En esta opción usted podrá consultar las solicitudes de ingreso pendientes.
                                 </p>
-                                <Link className="button" aria-current="page" to="/ConsultarInscripciones" >Consultar Inscripciones</Link>
+                                <Link className="button" aria-current="page" to="/ConsultarInscripciones" >Consultar Inscripciones</Link><br/>
+                                <Link className="button" aria-current="page" to="/Inscrip" >Aprobar o Rechazar Inscripcion</Link>
                             </div>
                         </div>
                     </div>

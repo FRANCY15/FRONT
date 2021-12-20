@@ -32,7 +32,7 @@ const Usuario = ({ user }) => {
         <td>{user.estado}</td>
         <td>{user.correoElectronico}</td>
         <td>{user.rol}</td>
-        <td>{user.estado == "Pendiente" ? <button className="btn btn-primary" onClick={aceptarUser}>Autorizar</button> : null }
+        <td>{user.estado === "Pendiente" ? <button className="btn btn-primary" onClick={aceptarUser}>Autorizar</button> : null }
             {/* <button className="btn btn-danger" onClick={eliminarUser}>Eliminar</button> */}</td>
     </tr>
 }

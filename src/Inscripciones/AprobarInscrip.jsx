@@ -23,7 +23,7 @@ const ConsultarInscrip = () => {
     `;
 
     const { loading, error, data } = useQuery(INS)
-    if (loading) return "<h1>Cargando</h1>"
+    if (loading) return "Cargando..."
   
   
     return (<table className="table">
