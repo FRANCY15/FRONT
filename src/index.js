@@ -4,31 +4,36 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+  HttpLink,
+  ApolloLink,
 } from "@apollo/client";
-import NavbarComponent from './shared/components/navbar/NavbarComponent'
-import { Routes ,Route, Router } from 'react-router-dom';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Home from './Home';
-import GestionDeAvances from './GestionDeAvances';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:9092/graphql',
-  cache: new InMemoryCache()
+import App from './App';
+
+const httpLink = new HttpLink({ uri: 'http://localhost:9092/graphql' });
+
+const authLink = new ApolloLink((operation, forward) => {
+  const token = localStorage.getItem('auth_token');
+  operation.setContext({
+    headers: {
+      authorization: token ? `${token}` : ''
+    }
+  });
+  return forward(operation);
 });
 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+});
 
 
 const inicio = document.getElementById("root")
 ReactDom.render(
   <ApolloProvider client={client}>
-    <Router>
-    <NavbarComponent />
-      <Routes>
-        <Route path="/GestionDeAvances" exact/>
-        <Route path= "/" components={Home} />
-      </Routes>
-    </Router>
+  <App/>
   </ApolloProvider>, inicio)
 
