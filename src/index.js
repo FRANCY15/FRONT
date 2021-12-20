@@ -4,6 +4,8 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+  HttpLink,
+  ApolloLink,
 } from "@apollo/client";
 
 
@@ -11,11 +13,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:9092/graphql',
-  cache: new InMemoryCache()
+const httpLink = new HttpLink({ uri: 'http://localhost:9092/graphql' });
+
+const authLink = new ApolloLink((operation, forward) => {
+  const token = localStorage.getItem('auth_token');
+  operation.setContext({
+    headers: {
+      authorization: token ? `${token}` : ''
+    }
+  });
+  return forward(operation);
 });
 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+});
 
 
 const inicio = document.getElementById("root")

@@ -2,8 +2,21 @@ import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCogs, faFolder, faChevronDown, faClipboardList, faSearch, faBrain, faFolderPlus} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router';
 
 const Navbar = () => {
+    const his = useNavigate();
+    let token = localStorage.getItem('auth_token')
+  //  var segments = token.split(".");
+  //  var claims = segments[1];
+  //  let rol = JSON.parte(decodeURIComponent(escape(window.atob(claims)))).role;
+  //   console.log(rol)
+
+    const cerrar = () => {
+      localStorage.clear()
+      his("/")
+    }
+//if (token){
     return (
         <div>
             
@@ -34,7 +47,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <form className="d-flex">
-                        <Link className="btn btn-secondary" to="/Login" >Ingresar<FontAwesomeIcon icon={faChevronDown}/> </Link>
+                        <button className="btn btn-secondary" onClick={cerrar}  >Cerrar sesion<  FontAwesomeIcon icon={faChevronDown}/> </button>
                     </form>
                     </div>
                 </div>
@@ -42,6 +55,11 @@ const Navbar = () => {
 
         </div>
     )
+    // } else {
+
+    //     his("/")
+    //     return <div></div>
+    // }
 }
 
 export default Navbar

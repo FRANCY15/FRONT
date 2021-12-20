@@ -45,6 +45,7 @@ function App() {
     <Router>
     <NavbarComponent/>
     <Routes>
+      <Route path="/" element={<Login/>} />
       <Route path="/Home" element={<PagPal />}/>
       <Route path="/GestionDeAvances" element={<GestionDeAvances />} />
       <Route path="/CrearAvance" element={<CrearAvances />} />
@@ -63,7 +64,6 @@ function App() {
       <Route path="/ConsultarEstudiantes" element={<ConsultarEstudiantes />} />
       <Route path="/ConsultarTodosLosProyectos" element={<ConsultarTodosLosProyectos/>}/>
       <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
-      <Route path="/Login" element={<Login/>} />
       <Route path="/GestionDeUsuarios" element={<GestionDeUsuarios />} />
       <Route path="/RegistrarUsuario" element={<RegistrarUsuario />} />
       <Route path="/ConsultarUsuarios" element={<ConsultarUsuarios />} />
