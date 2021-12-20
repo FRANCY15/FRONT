@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
 
-const httpLink = new HttpLink({ uri: 'http://localhost:9092/graphql' });
+const httpLink = new HttpLink({ uri: 'https://teamfifteen-back.herokuapp.com/graphql' });
 
 const authLink = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem('auth_token');
